@@ -6,7 +6,7 @@ import InvalidPromo from "./Cards/InvalidPromo";
 import Button from "../shared-modules/component-helpers/button/Button.jsx";
 import StyledText from "../shared-modules/component-helpers/text/StyledText.jsx";
 import InputBox from "../shared-modules/component-helpers/inputBox/InputBox";
-
+import { validateCoupon } from "../core/http/apiService";
 const Promo = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
 
@@ -17,13 +17,30 @@ const Promo = () => {
     navigate("/"); // Navigate to the home page
   };
 
-  const handlePlayground = () => {
-    if (promoCode === "1234") {
-      // Check if the promo code is valid
-      navigate("/Playground"); // Navigate to the playground page
-    } else {
-      setValidPromo(false); // Set the promo code as invalid
+  const handlePlayground = async() => {
+
+
+    try {
+      const payload = {
+        tiket: promoCode,
+        iduser: localStorage.getItem("idclientuser"),
+        idevent: localStorage.getItem("idevent"),
+      };
+       const response = await validateCoupon(payload); // Call the logIn API
+            console.log("Login successful:", response);
+
+            if(response.user =="already used"){
+              setValidPromo(false);
+            }else{
+              navigate("/Playground");
+            }
+    } catch (error) {
+      console.log(error);
     }
+
+
+
+  
   };
 
   return (

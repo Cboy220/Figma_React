@@ -24,6 +24,10 @@ const Hero = () => {
 
       // Store the token in local storage
       localStorage.setItem("authToken", response.token);
+      localStorage.setItem("idevent", JSON.stringify(response.user.user.idevent));
+      localStorage.setItem("idclientuser", JSON.stringify(response.user.user.idclientuser));
+
+      // localStorage.setItem("user", JSON.stringify(response.user));
 
       navigate("/promo"); // Navigate to the promo page on success
     } catch (error) {
