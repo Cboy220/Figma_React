@@ -1,0 +1,1649 @@
+{
+	"info": {
+		"_postman_id": "ea293262-3772-4cc9-a2e8-8b12cb893e7c",
+		"name": "FloriGroupP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30720496"
+	},
+	"item": [
+		{
+			"name": "CreateUserApp",
+			"item": [
+				{
+					"name": "logInTogetauth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"5\",\r\n  \"password\": \"juanDuran21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createNewUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6Ikp1YW4gZHVhcmFuIiwicGhvbmUiOiI1NDU0NTQ1NDU0NTQiLCJyb2xlIjoyLCJpYXQiOjE3NDUwNzQyMzUsImV4cCI6MTc0NTEwMzAzNX0.x_LmYu4JKBTdLal0NTWhjnMQcJDUYKinbXiY5frELWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Juan duaran\",\r\n  \"phone\": \"545454545454\",\r\n  \"password\": \"juanDuran21\",\r\n  \"idCS\": 12203,\r\n  \"idagent\": 5,\r\n  \"role\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAlUserIncludeDelete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUsersActive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer $TOKEN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"phone\": \"555-987898998986\",\r\n  \"password\":\"1236253\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request PUT 'http://localhost:3000/api/users/2' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'Authorization: Bearer $TOKEN' \\\r\n--data '{\r\n  \"name\": \"Updated User\",\r\n  \"phone\": \"555-9876\",\r\n  \"idCS\": 1,\r\n  \"role\": 2\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer $TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"3"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request DELETE 'http://localhost:3000/api/users/3' \\\r\n--header 'Authorization: Bearer $TOKEN'"
+					},
+					"response": []
+				},
+				{
+					"name": "RestaurarUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer $TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/2/restore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"2",
+								"restore"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request POST 'http://localhost:3000/api/users/3/restore' \\\r\n--header 'Authorization: Bearer $TOKEN'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "eventsApp",
+			"item": [
+				{
+					"name": "Get All Events",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwibmFtZSI6Ikp1YW4gZHVhcmFuIiwicGhvbmUiOiI1NDU0NTQ1NDU0NTQiLCJyb2xlIjoyLCJpYXQiOjE3NDUwODg3ODQsImV4cCI6MTc0NTExNzU4NH0.79t7HOkPUX7vNhC5r8_WmiC0RWo-ILaUOgCsDNheYTo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Events (Including Deleted - Admin Only)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA1OTkzMCwiZXhwIjoxNzQ0MDg4NzMwfQ.GqkY6diK7XaZFxNfYmFvSIfoZ1Wm3qMNY3jRq7RHt5I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Torneo de Verano League of Legends 2024\",\n  \"description\": \"Gran torneo competitivo de League of Legends para jugadores de todos los niveles. Premios increíbles y transmisión en vivo.\",\n  \"idcse\": 12339,\n  \"game\": \"League of Legends\",\n  \"startat\": \"2024-07-15T18:00:00Z\",\n  \"endat\": \"2024-07-16T22:00:00Z\",\n  \"phatImage\": {\"hola\":\"test\"},\n  \"state\": \"1\",\n  \"idUser\": 1,\n  \"structureGame\": \"Double Elimination\",\n  \"idImagen\": \"LOL2024-SUMMER-001\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Torneo de Verano League of Legends 2024 test por partes\"\n  \n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/events/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Deleted Event (Admin Only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/4/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readAlert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/4/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA1ODc5OCwiZXhwIjoxNzQ0MDg3NTk4fQ.Na5Z8Z6f34whcSo8bupZZxW1IzjP6u_9IndLEgRxzIk",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "imagenApp",
+			"item": [
+				{
+					"name": "Create New Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"images\":{\"name1\": \"Torneo LOL Verano 2024\",\"name2\": \"Torneo LOL Verano 2024\",\"name3\": \"Torneo LOL Verano 2024\",\"name4\": \"Torneo LOL Verano 2024\"},   \n    \"name\": \"Torneo LOL Verano 2024\",\n    \"idevent\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Images with Name Filter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images?name=Torneo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Torneo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"updateImage\",\n    \"idevent\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LogGameMade",
+			"item": []
+		},
+		{
+			"name": "usersGame",
+			"item": [
+				{
+					"name": "Create Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Juan Pérez\",\n    \"phone\": \"555-1234\",\n    \"birthdate\": \"1990-05-15\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Client Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers?name=Juan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Juan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client User by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"555-5678\",\n    \"birthdate\": \"1888-10-20\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NCwibmFtZSI6Ikp1YW4gUMOpcmV6IiwicGhvbmUiOiI1NTUtMTIzNCIsImJpcnRoZGF0ZSI6IjE5OTAtMDUtMTVUMDU6MDA6MDAuMDAwWiIsImFnZSI6MzQsImVudHJ5ZGF0ZSI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsImRlbGV0ZWF0IjpudWxsLCJ1cGRhdGVhdCI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsInBhc3N3b3JkIjoiJDJhJDEwJC9CM2h0Q3FGQk83bEouNGEvdE05Uk9DcGpXbVJQYS5ZR1lCY1ZxRG9CWVNpQW56WDIvNkIuIiwiaWRuYW1lIjoianVhbnDDqXJleiIsImlkY2xpZW50U2NvcmUiOm51bGwsImlkQ2xpZW50VXNlciI6bnVsbCwicG9zaXRpb24iOm51bGwsInNjb3JlIjpudWxsLCJpZGV2ZW50IjpudWxsfSwiaWF0IjoxNzQ1MDgyMTM4LCJleHAiOjE3NDUxMTA5Mzh9.j2RjFsO7BwoviX8dvlJfBm0paTc41L3-FIXyfJJHM78",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/1/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"1",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "used tiket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NCwibmFtZSI6Ikp1YW4gUMOpcmV6IiwicGhvbmUiOiI1NTUtMTIzNCIsImJpcnRoZGF0ZSI6IjE5OTAtMDUtMTVUMDU6MDA6MDAuMDAwWiIsImFnZSI6MzQsImVudHJ5ZGF0ZSI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsImRlbGV0ZWF0IjpudWxsLCJ1cGRhdGVhdCI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsInBhc3N3b3JkIjoiJDJhJDEwJC9CM2h0Q3FGQk83bEouNGEvdE05Uk9DcGpXbVJQYS5ZR1lCY1ZxRG9CWVNpQW56WDIvNkIuIiwiaWRuYW1lIjoianVhbnDDqXJleiIsImlkY2xpZW50U2NvcmUiOm51bGwsImlkQ2xpZW50VXNlciI6bnVsbCwicG9zaXRpb24iOm51bGwsInNjb3JlIjpudWxsLCJpZGV2ZW50IjpudWxsfSwiaWF0IjoxNzQ1MDgyMTM4LCJleHAiOjE3NDUxMTA5Mzh9.j2RjFsO7BwoviX8dvlJfBm0paTc41L3-FIXyfJJHM78",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tiket\": \"itiporeiopertiret54s3opipoi543io54\",\r\n    \"iduser\":1,\r\n    \"idevent\":5\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/tiket",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"tiket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eventinteraction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NCwibmFtZSI6Ikp1YW4gUMOpcmV6IiwicGhvbmUiOiI1NTUtMTIzNCIsImJpcnRoZGF0ZSI6IjE5OTAtMDUtMTVUMDU6MDA6MDAuMDAwWiIsImFnZSI6MzQsImVudHJ5ZGF0ZSI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsImRlbGV0ZWF0IjpudWxsLCJ1cGRhdGVhdCI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsInBhc3N3b3JkIjoiJDJhJDEwJC9CM2h0Q3FGQk83bEouNGEvdE05Uk9DcGpXbVJQYS5ZR1lCY1ZxRG9CWVNpQW56WDIvNkIuIiwiaWRuYW1lIjoianVhbnDDqXJleiIsImlkY2xpZW50U2NvcmUiOm51bGwsImlkQ2xpZW50VXNlciI6bnVsbCwicG9zaXRpb24iOm51bGwsInNjb3JlIjpudWxsLCJpZGV2ZW50IjpudWxsfSwiaWF0IjoxNzQ1MDgyMTM4LCJleHAiOjE3NDUxMTA5Mzh9.j2RjFsO7BwoviX8dvlJfBm0paTc41L3-FIXyfJJHM78",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tiket\": \"itiporeiopertiret54s3opipoi543io54\",\r\n    \"iduser\":1,\r\n    \"idevent\":5\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/tiket",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"tiket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authloginclient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Juan Pérez\",\r\n  \"phone\": \"555-1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/Client/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"Client",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "logP",
+			"item": [
+				{
+					"name": "Create Event Interaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idclientuser\":1,   \n    \"idevent\": 4,\n    \"position\": \"33\",\n    \"score\": 8,\n    \"cupon\": \"EVENTO2024-SUMMER\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/eventinteractions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"eventinteractions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comentbox",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Juan Pérez\",\n    \"email\": \"juan.perez@example.com\",\n    \"idcs\": 12339,\n    \"description\": \"Excelente servicio y organización\",\n    \"affair\": \"Comentario sobre evento\",\n    \"idimages\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/comments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/comments?idcs=1&affair=evento",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "idcs",
+									"value": "1"
+								},
+								{
+									"key": "affair",
+									"value": "evento"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/comments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Comentario actualizado\",\n    \"answer\": \"Gracias por tu feedback\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/comments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/comments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "imagesService",
+			"item": [
+				{
+					"name": "1. Listar Carpetas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/folders/testupdateD",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"folders",
+								"testupdateD"
+							]
+						},
+						"description": "Obtiene todas las carpetas de carga dentro de 'testupdateD'"
+					},
+					"response": []
+				},
+				{
+					"name": "2. Todas las Imágenes (Plano)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/all-flat/testupdateD",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"all-flat",
+								"testupdateD"
+							]
+						},
+						"description": "Obtiene todas las imágenes de 'testupdateD' en formato plano"
+					},
+					"response": []
+				},
+				{
+					"name": "3. Todas las Imágenes (Agrupado)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/all/testupdateD",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"all",
+								"testupdateD"
+							]
+						},
+						"description": "Obtiene todas las imágenes de 'testupdateD' agrupadas por carpeta"
+					},
+					"response": []
+				},
+				{
+					"name": "4. Imágenes de Carpeta Específica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/folder/testupdateD/3d2487e7-d2cc-4daf-bc4a-c56c41cde293",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"folder",
+								"testupdateD",
+								"3d2487e7-d2cc-4daf-bc4a-c56c41cde293"
+							]
+						},
+						"description": "Obtiene las imágenes de la carpeta específica"
+					},
+					"response": []
+				},
+				{
+					"name": "5. Imagen Específica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/f5826fc9-7ed4-4165-9ce0-a3561e942d69",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"f5826fc9-7ed4-4165-9ce0-a3561e942d69"
+							]
+						},
+						"description": "Obtiene los metadatos de una imagen específica"
+					},
+					"response": []
+				},
+				{
+					"name": "6. Ver Imagen (Libro)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/uploads/testupdateD/3d2487e7-d2cc-4daf-bc4a-c56c41cde293/f5826fc9-7ed4-4165-9ce0-a3561e942d69.webp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"uploads",
+								"testupdateD",
+								"3d2487e7-d2cc-4daf-bc4a-c56c41cde293",
+								"f5826fc9-7ed4-4165-9ce0-a3561e942d69.webp"
+							]
+						},
+						"description": "Accede directamente a la imagen del libro"
+					},
+					"response": []
+				},
+				{
+					"name": "7. Cargar Nueva Imagen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images/upload/testupdateD",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"upload",
+								"testupdateD"
+							]
+						},
+						"description": "Carga una nueva imagen a 'testupdateD'"
+					},
+					"response": []
+				},
+				{
+					"name": "8. Cargar Múltiples Imágenes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images/upload-multiple/testupdateD?max=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"upload-multiple",
+								"testupdateD"
+							],
+							"query": [
+								{
+									"key": "max",
+									"value": "20"
+								}
+							]
+						},
+						"description": "Carga múltiples imágenes a 'testupdateD'"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3000/",
+			"type": "default"
+		}
+	]
+}
