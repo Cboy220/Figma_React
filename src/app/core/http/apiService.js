@@ -51,6 +51,8 @@ const apiClient = {
 // Example API functions
 export const logIn = (data) => apiClient.post('/api/auth/Client/1', data);
 export const validateCoupon = (data) => apiClient.post('/api/clientusers/tiket', data);
+// /api/secuencias/{{idevent}}/cliente?idclient=1
+export const startGame = (idevent) => apiClient.post(`/api/secuencias/${idevent}/cliente?idclient=1`);
 export const createUser = (data) => apiClient.post('/api/users', data);
 export const getAllUsers = () => apiClient.get('/api/users/all');
 export const getUserById = (id) => apiClient.get(`/api/users/${id}`);

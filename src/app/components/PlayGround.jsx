@@ -15,6 +15,7 @@ import Timer from "./Timer";
 import { Confirm } from "./Cards";
 import Button from "../shared-modules/component-helpers/button/Button.jsx";
 import StyledText from "../shared-modules/component-helpers/text/StyledText.jsx";
+import { startGame } from "../core/http/apiService"; // Import the startGame API function
 
 const PlayGround = () => {
   const [confirmed, setConfirmed] = useState(false); // State to manage the confirmation status
@@ -23,28 +24,36 @@ const PlayGround = () => {
 
   const navigate = useNavigate();
 
-  const handleConfirm = () => {
-    // Handle the confirm button click here
-    console.log("Confirm button clicked!");
-    // You can add your logic here, such as navigating to another page or showing a message
-  };
+  // const handleConfirm = () => {
+  //   // Handle the confirm button click here
+  //   console.log("Confirm button clicked!");
+  //   // You can add your logic here, such as navigating to another page or showing a message
+  // };
 
-  const handleSuccessClick = () => {
-    // Handle the success button click here
-    console.log("Success button clicked!");
-    setConfirmed(true); // Set the confirmed state to true
-    // You can add your logic here, such as navigating to another page or showing a message
-  };
+  // const handleSuccessClick = () => {
+  //   // Handle the success button click here
+  //   console.log("Success button clicked!");
+  //   setConfirmed(true); // Set the confirmed state to true
+  //   // You can add your logic here, such as navigating to another page or showing a message
+  // };
 
   const handleCancel = () => {
     setConfirmed(false); // Reset the confirmed state to false
   };
 
-  const handleStartCancelClick = () => {
+  const handleStartCancelClick = async () => {
     if (timerRunning) {
       setConfirmed(true); // Show Confirm component
     } else {
-      setTimerRunning(true); // Start the timer
+      try {
+        setTimerRunning(true); // Start the timer
+        const idevent = localStorage.getItem("idevent");
+        const response = await startGame(idevent); // Call the startGame API
+        console.log("Game started successfully:", response);
+        
+      } catch (error) {
+        console.error("Error starting the game:", error);
+      }
     }
   };
 
