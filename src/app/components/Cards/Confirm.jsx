@@ -3,6 +3,8 @@ import { Alert, TikGreen } from "../../../assets";
 import { useNavigate } from "react-router-dom";
 import StyledText from "../../shared-modules/component-helpers/text/StyledText";
 import Button from "../../shared-modules/component-helpers/button/Button";
+import { finishGame } from "../../core/http/apiService"; // Import the finishGame API function
+
 const Confirm = ({ onCancel }) => {
   const [confirmedExit, setConfirmedExit] = useState(false); // State to manage the confirmation status
   const [flipped, setFlipped] = useState(false); // State to manage card flip
@@ -15,8 +17,20 @@ const Confirm = ({ onCancel }) => {
     }, 600); // Delay to match flip animation duration
   };
 
-  const ExitFromMain = () => {
-    navigate("/"); // Navigate to the home page
+  const ExitFromMain = async () => {
+    try {
+      const data = {
+        idclientuser: localStorage.getItem("idclientuser"),
+        idevent: localStorage.getItem("idevent"),
+        score: localStorage.getItem("score"),
+        cupon: localStorage.getItem("coupon"),
+      };
+      const response = await finishGame(data); // Call the finishGame API
+      console.log("Game finished successfully:", response);
+      navigate("/"); // Navigate to the home page
+    } catch (error) {
+      console.error("Error finishing the game:", error);
+    }
   };
 
   return (

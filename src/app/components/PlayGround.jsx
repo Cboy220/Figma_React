@@ -49,6 +49,7 @@ const PlayGround = () => {
         setTimerRunning(true); // Start the timer
         const idevent = localStorage.getItem("idevent");
         const response = await startGame(idevent); // Call the startGame API
+        localStorage.setItem("score", response.data.clientInfo.score);
         console.log("Game started successfully:", response);
         
       } catch (error) {

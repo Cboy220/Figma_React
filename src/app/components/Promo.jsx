@@ -32,6 +32,7 @@ const Promo = () => {
             if(response.user =="already used"){
               setValidPromo(false);
             }else{
+              localStorage.setItem("coupon", promoCode);
               navigate("/Playground");
             }
     } catch (error) {
