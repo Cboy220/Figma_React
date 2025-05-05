@@ -1,0 +1,2193 @@
+{
+	"info": {
+		"_postman_id": "ea293262-3772-4cc9-a2e8-8b12cb893e7c",
+		"name": "FloriGroupP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30720496"
+	},
+	"item": [
+		{
+			"name": "CreateUserApp",
+			"item": [
+				{
+					"name": "logInTogetauth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"1\",\r\n  \"password\": \"Admin123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://florigroup.onrender.com/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"florigroup",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createNewUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTg0NTQ1NywiZXhwIjoxNzQ1ODc0MjU3fQ.FEM4mYXU9CckARWnsDhywT-hBjRTdchKv-ItTjtduBo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Yorlan Test 1\",\r\n  \"phone\": \"543224678140\",\r\n  \"password\": \"yorlanforero1\",\r\n  \"idCS\": 12203,\r\n  \"idagent\": 526536,\r\n  \"role\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAlUserIncludeDelete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTgwOTA4NywiZXhwIjoxNzQ1ODM3ODg3fQ.rxfWnJL9n_zGFGO2_IIURKfI2biovKsONsyMmnX86_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://florigroup.onrender.com/api/users/all",
+							"protocol": "https",
+							"host": [
+								"florigroup",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUsersActive",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer $TOKEN"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n  \"phone\": \"555-987898998986\",\r\n  \"password\":\"1236253\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request PUT 'http://localhost:3000/api/users/2' \\\r\n--header 'Content-Type: application/json' \\\r\n--header 'Authorization: Bearer $TOKEN' \\\r\n--data '{\r\n  \"name\": \"Updated User\",\r\n  \"phone\": \"555-9876\",\r\n  \"idCS\": 1,\r\n  \"role\": 2\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer $TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"3"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request DELETE 'http://localhost:3000/api/users/3' \\\r\n--header 'Authorization: Bearer $TOKEN'"
+					},
+					"response": []
+				},
+				{
+					"name": "RestaurarUsuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA0MTY0NCwiZXhwIjoxNzQ0MDcwNDQ0fQ.35OVBJSRtOArrkE58y-GCeo8y7BtYuvO4j6rIarB9Z4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer $TOKEN"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/2/restore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"2",
+								"restore"
+							]
+						},
+						"description": "Generated from cURL: curl --location --request POST 'http://localhost:3000/api/users/3/restore' \\\r\n--header 'Authorization: Bearer $TOKEN'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "eventsApp",
+			"item": [
+				{
+					"name": "Get All Events",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTgwOTA4NywiZXhwIjoxNzQ1ODM3ODg3fQ.rxfWnJL9n_zGFGO2_IIURKfI2biovKsONsyMmnX86_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idcs\": [12203]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Events (Including Deleted - Admin Only)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTgwOTA4NywiZXhwIjoxNzQ1ODM3ODg3fQ.rxfWnJL9n_zGFGO2_IIURKfI2biovKsONsyMmnX86_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTgwOTA4NywiZXhwIjoxNzQ1ODM3ODg3fQ.rxfWnJL9n_zGFGO2_IIURKfI2biovKsONsyMmnX86_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Torneo de Verano League of Legends 20243\",\n  \"description\": \"Gran torneo competitivo de League of Legends para jugadores de todos los niveles. Premios increíbles y transmisión en vivo.2\",\n  \"idcse\": [12271],\n  \"game\": \"League of Legends\",\n  \"startat\": \"2024-07-15T18:00:00Z\",\n  \"endat\": \"2024-07-16T22:00:00Z\",\n  \"phatImage\": {\"hola\":\"test\"},\n  \"state\": \"1\",\n  \"idUser\": 1,\n  \"structureGame\": \"Double23Elimination\",\n  \"idImagen\": \"LOL2024-SUMMER-001\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/events",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Torneo de Verano League of Legends 2024 test por partes\"\n  \n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/events/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Deleted Event (Admin Only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/events/4/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"4",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readAlert",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTY3MzI4NCwiZXhwIjoxNzQ1NzAyMDg0fQ.rkVjsH0BD3V8cGZAJbx4kI8pz0npHpNtdsJolN0_kAQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":86,\r\n    \"isread\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/events/alertread",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"events",
+								"alertread"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA1ODc5OCwiZXhwIjoxNzQ0MDg3NTk4fQ.Na5Z8Z6f34whcSo8bupZZxW1IzjP6u_9IndLEgRxzIk",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "imagenApp",
+			"item": [
+				{
+					"name": "Create New Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"images\":{\"name1\": \"Torneo LOL Verano 2024\",\"name2\": \"Torneo LOL Verano 2024\",\"name3\": \"Torneo LOL Verano 2024\",\"name4\": \"Torneo LOL Verano 2024\"},   \n    \"name\": \"Torneo LOL Verano 2024\",\n    \"idevent\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Images",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Images with Name Filter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images?name=Torneo",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Torneo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"updateImage\",\n    \"idevent\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/images/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LogGameMade",
+			"item": []
+		},
+		{
+			"name": "usersGame",
+			"item": [
+				{
+					"name": "Create Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Yorlan forero\",\n    \"phone\": \"3224678140\",\n    \"birthdate\": \"2002-09-03\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Client Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers?name=Juan",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Juan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client User by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NSwibmFtZSI6IllvcmxhbiBmb3Jlcm8iLCJwaG9uZSI6IjMyMjQ2NzgxNDAiLCJiaXJ0aGRhdGUiOiIyMDAyLTA5LTAzVDAwOjAwOjAwLjAwMFoiLCJhZ2UiOjIyLCJlbnRyeWRhdGUiOiIyMDI1LTA0LTE5VDAwOjAwOjAwLjAwMFoiLCJkZWxldGVhdCI6bnVsbCwidXBkYXRlYXQiOiIyMDI1LTA0LTE5VDAwOjAwOjAwLjAwMFoiLCJwYXNzd29yZCI6IiQyYSQxMCRtYWp2Y0lXVjNSbHFkYi96d2J2akR1QkdMS1ZOTFdUTGswUGEvOTFJZS9UUm80eGxlZmJPMiIsImlkbmFtZSI6InlvcmxhbmZvcmVybyIsImlkY2xpZW50U2NvcmUiOm51bGwsInBvc2l0aW9uIjpudWxsLCJzY29yZSI6bnVsbCwiaWRldmVudCI6bnVsbCwiaWRDbGllbnRVc2VyIjpudWxsfSwiaWF0IjoxNzQ1OTMwMDU0LCJleHAiOjE3NDU5NTg4NTR9.etKgW7viMPSgM633jdA4TDF6bbV9gtWl5lJ0Bs6FXpg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"555-5678\",\n    \"birthdate\": \"1888-10-20\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Client User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NCwibmFtZSI6Ikp1YW4gUMOpcmV6IiwicGhvbmUiOiI1NTUtMTIzNCIsImJpcnRoZGF0ZSI6IjE5OTAtMDUtMTVUMDU6MDA6MDAuMDAwWiIsImFnZSI6MzQsImVudHJ5ZGF0ZSI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsImRlbGV0ZWF0IjpudWxsLCJ1cGRhdGVhdCI6IjIwMjUtMDQtMTlUMDU6MDA6MDAuMDAwWiIsInBhc3N3b3JkIjoiJDJhJDEwJC9CM2h0Q3FGQk83bEouNGEvdE05Uk9DcGpXbVJQYS5ZR1lCY1ZxRG9CWVNpQW56WDIvNkIuIiwiaWRuYW1lIjoianVhbnDDqXJleiIsImlkY2xpZW50U2NvcmUiOm51bGwsImlkQ2xpZW50VXNlciI6bnVsbCwicG9zaXRpb24iOm51bGwsInNjb3JlIjpudWxsLCJpZGV2ZW50IjpudWxsfSwiaWF0IjoxNzQ1MDgyMTM4LCJleHAiOjE3NDUxMTA5Mzh9.j2RjFsO7BwoviX8dvlJfBm0paTc41L3-FIXyfJJHM78",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/1/restore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"1",
+								"restore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "used tiket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NSwibmFtZSI6IllvcmxhbiBmb3Jlcm8iLCJwaG9uZSI6IjMyMjQ2NzgxNDAiLCJiaXJ0aGRhdGUiOiIyMDAyLTA5LTAzVDA1OjAwOjAwLjAwMFoiLCJhZ2UiOjIyLCJlbnRyeWRhdGUiOiIyMDI1LTA0LTE5VDA1OjAwOjAwLjAwMFoiLCJkZWxldGVhdCI6bnVsbCwidXBkYXRlYXQiOiIyMDI1LTA0LTE5VDA1OjAwOjAwLjAwMFoiLCJwYXNzd29yZCI6IiQyYSQxMCRtYWp2Y0lXVjNSbHFkYi96d2J2akR1QkdMS1ZOTFdUTGswUGEvOTFJZS9UUm80eGxlZmJPMiIsImlkbmFtZSI6InlvcmxhbmZvcmVybyIsImlkY2xpZW50U2NvcmUiOjIxLCJwb3NpdGlvbiI6IjIiLCJzY29yZSI6IjkwMDAiLCJpZGV2ZW50IjoxMCwiaWRDbGllbnRVc2VyIjo1fSwiaWF0IjoxNzQ2MjMwNDc1LCJleHAiOjE3NDYyNTkyNzV9.E8-3jj59bXCUaSQLonJUPcZnKcXydkZdJ5qQc8YnRXw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tiket\": \"itiporeiopertirdet54sfdf3opipoi543io54\",\r\n    \"iduser\":1,\r\n    \"idevent\":6\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/tiket",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"tiket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eventinteraction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NSwibmFtZSI6IllvcmxhbiBmb3Jlcm8iLCJwaG9uZSI6IjMyMjQ2NzgxNDAiLCJiaXJ0aGRhdGUiOiIyMDAyLTA5LTAzVDA1OjAwOjAwLjAwMFoiLCJhZ2UiOjIyLCJlbnRyeWRhdGUiOiIyMDI1LTA0LTE5VDA1OjAwOjAwLjAwMFoiLCJkZWxldGVhdCI6bnVsbCwidXBkYXRlYXQiOiIyMDI1LTA0LTE5VDA1OjAwOjAwLjAwMFoiLCJwYXNzd29yZCI6IiQyYSQxMCRtYWp2Y0lXVjNSbHFkYi96d2J2akR1QkdMS1ZOTFdUTGswUGEvOTFJZS9UUm80eGxlZmJPMiIsImlkbmFtZSI6InlvcmxhbmZvcmVybyIsImlkY2xpZW50U2NvcmUiOjIxLCJwb3NpdGlvbiI6IjIiLCJzY29yZSI6IjkwMDAiLCJpZGV2ZW50IjoxMCwiaWRDbGllbnRVc2VyIjo1fSwiaWF0IjoxNzQ2MjMwNDc1LCJleHAiOjE3NDYyNTkyNzV9.E8-3jj59bXCUaSQLonJUPcZnKcXydkZdJ5qQc8YnRXw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idevent\":10,\r\n    \"score\":50,\r\n    \"idclientuser\": \"3\",\r\n    \"cupon\":\"dsñlñldslñsdñl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/clientusers/tiket",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"clientusers",
+								"tiket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authloginclient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Yorlan forero\",\r\n  \"phone\": \"3224678140\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/Client/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"Client",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comentbox",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NDA2MTQ2MSwiZXhwIjoxNzQ0MDkwMjYxfQ.xsfEJ4rLWIQY2crp_Eg25zQWqzvisglJJ0K273yD9so",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Juan Pérez\",\n    \"email\": \"juan.perez@example.com\",\n    \"idcs\": 12339,\n    \"description\": \"Excelente servicio y organización\",\n    \"affair\": \"Comentario sobre evento\",\n    \"idimages\": 4\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/comments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/comments?idcs=1&affair=evento",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "idcs",
+									"value": "1"
+								},
+								{
+									"key": "affair",
+									"value": "evento"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/comments/6",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Comentario actualizado\",\n    \"answer\": \"Gracias por tu feedback\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/comments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/comments/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "imagesService",
+			"item": [
+				{
+					"name": "1. Listar Carpetas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTgwOTA4NywiZXhwIjoxNzQ1ODM3ODg3fQ.rxfWnJL9n_zGFGO2_IIURKfI2biovKsONsyMmnX86_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/folders/uploads",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"folders",
+								"uploads"
+							]
+						},
+						"description": "Obtiene todas las carpetas de carga dentro de 'testupdateD'"
+					},
+					"response": []
+				},
+				{
+					"name": "2. Todas las Imágenes (Plano)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTgwOTA4NywiZXhwIjoxNzQ1ODM3ODg3fQ.rxfWnJL9n_zGFGO2_IIURKfI2biovKsONsyMmnX86_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/all-flat/44af2733-526a-46e9-9ff2-045271d3d176",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"all-flat",
+								"44af2733-526a-46e9-9ff2-045271d3d176"
+							]
+						},
+						"description": "Obtiene todas las imágenes de 'testupdateD' en formato plano"
+					},
+					"response": []
+				},
+				{
+					"name": "3. Todas las Imágenes (Agrupado)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTc3ODM0OCwiZXhwIjoxNzQ1ODA3MTQ4fQ.ij6_LIPwCLMpBGEg3mFzgOFtPiEd2b7cCU3mX0d0asY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/all/testimage",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"all",
+								"testimage"
+							]
+						},
+						"description": "Obtiene todas las imágenes de 'testupdateD' agrupadas por carpeta"
+					},
+					"response": []
+				},
+				{
+					"name": "4. Imágenes de Carpeta Específica",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NjEzNTg5MywiZXhwIjoxNzQ2MTY0NjkzfQ.eKnYsm247MlE1J274bHobRG9QhmTeOhwLMoY6y0nHEc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/folder/test/846a3e07-622f-4be2-bb8c-c81edc29d64a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"folder",
+								"test",
+								"846a3e07-622f-4be2-bb8c-c81edc29d64a"
+							]
+						},
+						"description": "Obtiene las imágenes de la carpeta específica"
+					},
+					"response": []
+				},
+				{
+					"name": "5. Imagen Específica",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTgwOTA4NywiZXhwIjoxNzQ1ODM3ODg3fQ.rxfWnJL9n_zGFGO2_IIURKfI2biovKsONsyMmnX86_M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/images/f1278848-bfb9-4e54-9b1f-d1d81e633258",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"f1278848-bfb9-4e54-9b1f-d1d81e633258"
+							]
+						},
+						"description": "Obtiene los metadatos de una imagen específica"
+					},
+					"response": []
+				},
+				{
+					"name": "6. Ver Imagen (Libro)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/uploads/testImage/44af2733-526a-46e9-9ff2-045271d3d176/342dc5ea-01cf-4a5c-9212-765fee37bd93.png",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"uploads",
+								"testImage",
+								"44af2733-526a-46e9-9ff2-045271d3d176",
+								"342dc5ea-01cf-4a5c-9212-765fee37bd93.png"
+							]
+						},
+						"description": "Accede directamente a la imagen del libro"
+					},
+					"response": []
+				},
+				{
+					"name": "7. Cargar Nueva Imagen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NTkzODkwMiwiZXhwIjoxNzQ1OTY3NzAyfQ.ydEVm-hfQ1Bq09oRDlCFH7bnlsNMI76kW_H7-6Ry99c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1f023946-8793-4030-937c-f56578884516"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images/upload/testupdateD",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"upload",
+								"testupdateD"
+							]
+						},
+						"description": "Carga una nueva imagen a 'testupdateD'"
+					},
+					"response": []
+				},
+				{
+					"name": "8. Cargar Múltiples Imágenes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJwaG9uZSI6IjU1NS1BRE1JTiIsInJvbGUiOjEsImlhdCI6MTc0NjIzMjE2NiwiZXhwIjoxNzQ2MjYwOTY2fQ.Yj4J2rr_j90xH5fOhlJ-BN3mOoFJastDJCdKeQ3y2P4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f026d7d-5758-4bc0-ad3a-287513d1b5d5",
+										"postman-cloud:///1f023946-8744-4e30-bf08-f445b0224824",
+										"postman-cloud:///1f023946-8793-4030-937c-f56578884516",
+										"postman-cloud:///1f023946-86f1-4e10-83e0-f0c289305ff6",
+										"postman-cloud:///1f023946-87d9-4d00-80f9-3cc35a07913a",
+										"postman-cloud:///1f023966-39ff-47e0-8b29-b76a29783832",
+										"postman-cloud:///1f023946-87d9-4d00-a4bc-0b02471fa682",
+										"postman-cloud:///1f023966-3a24-41d0-a680-b7aa5f671e30",
+										"postman-cloud:///1f023966-39e4-4a30-95ce-fe152a0452a8",
+										"postman-cloud:///1f023966-40da-4dd0-83df-a414e6ac14e3",
+										"postman-cloud:///1f023966-4244-4310-9cca-912a71148686",
+										"postman-cloud:///1f023966-4028-4a40-950f-521a88f2b0be",
+										"postman-cloud:///1f023966-43d2-4240-81bf-2a9b6f276b72",
+										"postman-cloud:///1f023966-4560-4170-a2f3-6b638096e898",
+										"postman-cloud:///1f023966-46ee-40a0-a7e8-187d03275874",
+										"postman-cloud:///1f023966-4877-41b0-b9bb-76a5358c5ce0",
+										"postman-cloud:///1f023966-573a-4670-8dfe-f196d18eb4f6",
+										"postman-cloud:///1f023966-5626-4860-a781-77a199bcca2b",
+										"postman-cloud:///1f023966-40dd-44e0-8b90-2220ef8c9ece",
+										"postman-cloud:///1f023966-542f-4980-85a5-c74cc546e746"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/images/upload-multiple/GAMEUSER?max=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"images",
+								"upload-multiple",
+								"GAMEUSER"
+							],
+							"query": [
+								{
+									"key": "max",
+									"value": "20"
+								}
+							]
+						},
+						"description": "Carga múltiples imágenes a 'testupdateD'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StartGame",
+			"item": [
+				{
+					"name": "startgame",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/secuencias/{{idevent}}/cliente?idclient=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"secuencias",
+								"{{idevent}}",
+								"cliente"
+							],
+							"query": [
+								{
+									"key": "idclient",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Obtiene una secuencia aleatoria no utilizada por un cliente específico"
+					},
+					"response": []
+				},
+				{
+					"name": "finishGame",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkY2xpZW50dXNlciI6NSwibmFtZSI6IllvcmxhbiBmb3Jlcm8iLCJwaG9uZSI6IjMyMjQ2NzgxNDAiLCJiaXJ0aGRhdGUiOiIyMDAyLTA5LTAzVDA1OjAwOjAwLjAwMFoiLCJhZ2UiOjIyLCJlbnRyeWRhdGUiOiIyMDI1LTA0LTE5VDA1OjAwOjAwLjAwMFoiLCJkZWxldGVhdCI6bnVsbCwidXBkYXRlYXQiOiIyMDI1LTA0LTE5VDA1OjAwOjAwLjAwMFoiLCJwYXNzd29yZCI6IiQyYSQxMCRtYWp2Y0lXVjNSbHFkYi96d2J2akR1QkdMS1ZOTFdUTGswUGEvOTFJZS9UUm80eGxlZmJPMiIsImlkbmFtZSI6InlvcmxhbmZvcmVybyIsImlkY2xpZW50U2NvcmUiOjIxLCJwb3NpdGlvbiI6IjIiLCJzY29yZSI6IjkwMDAiLCJpZGV2ZW50IjoxMCwiaWRDbGllbnRVc2VyIjo1fSwiaWF0IjoxNzQ2MjMwNDc1LCJleHAiOjE3NDYyNTkyNzV9.E8-3jj59bXCUaSQLonJUPcZnKcXydkZdJ5qQc8YnRXw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idclientuser\":5,   \n    \"idevent\":10,    \n    \"score\": 9000,\n    \"cupon\": \"EVENTO2024-SUMMER\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/eventinteractions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"eventinteractions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "generateSquema",
+			"item": [
+				{
+					"name": "Generar Secuencias",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idevent\": 1,\n    \"imagesid\": [\n        {\n            \"idimage\": \"012af2b3-facb-4893-beba-f43b0229bac3\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/012af2b3-facb-4893-beba-f43b0229bac3.png\"\n        },\n        {\n            \"idimage\": \"123cb9d3-5cbb-47d5-a9bd-b85652a9a9c4\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/123cb9d3-5cbb-47d5-a9bd-b85652a9a9c4.webp\"\n        },\n        {\n            \"idimage\": \"d66d82d7-12c6-421f-9311-a50114e6e176\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/d66d82d7-12c6-421f-9311-a50114e6e176.webp\"\n        },\n        {\n            \"idimage\": \"226cb4b8-5615-462f-a605-b7a914332497\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/226cb4b8-5615-462f-a605-b7a914332497.webp\"\n        },\n        {\n            \"idimage\": \"fc7f8085-1f27-49c6-9548-07a8c3fe9327\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/fc7f8085-1f27-49c6-9548-07a8c3fe9327.webp\"\n        },\n        {\n            \"idimage\": \"9b059c08-5e7f-4285-ad97-9ba83caa5057\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/9b059c08-5e7f-4285-ad97-9ba83caa5057.png\"\n        },\n        {\n            \"idimage\": \"15f49b77-f07c-4ca9-b20e-d9d56cc3e879\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/15f49b77-f07c-4ca9-b20e-d9d56cc3e879.webp\"\n        },\n        {\n            \"idimage\": \"c9680096-0eaa-4c19-bf66-6d22f464e8be\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/c9680096-0eaa-4c19-bf66-6d22f464e8be.png\"\n        },\n        {\n            \"idimage\": \"d27507a4-8b55-4f91-86d5-c108d54f173d\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/d27507a4-8b55-4f91-86d5-c108d54f173d.png\"\n        },\n        {\n            \"idimage\": \"59c08c3c-ac05-4a86-bbf3-b5bfc8afaf98\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/59c08c3c-ac05-4a86-bbf3-b5bfc8afaf98.png\"\n        },\n        {\n            \"idimage\": \"04447002-0883-41d4-8de3-30f266e00c55\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/04447002-0883-41d4-8de3-30f266e00c55.png\"\n        },\n        {\n            \"idimage\": \"4196daac-a221-4593-874f-02266069c35e\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/4196daac-a221-4593-874f-02266069c35e.png\"\n        },\n        {\n            \"idimage\": \"43e912c3-9060-49ff-9982-f2668f5cc16a\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/43e912c3-9060-49ff-9982-f2668f5cc16a.png\"\n        },\n        {\n            \"idimage\": \"78df6319-fdf0-40b3-9c81-3f069d22cf50\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/78df6319-fdf0-40b3-9c81-3f069d22cf50.png\"\n        },\n        {\n            \"idimage\": \"ad28c653-d803-4e60-8890-db6e08ad5b2f\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/ad28c653-d803-4e60-8890-db6e08ad5b2f.png\"\n        },\n        {\n            \"idimage\": \"39d7df95-5bfd-40f4-ac44-5c0c9e44cdec\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/39d7df95-5bfd-40f4-ac44-5c0c9e44cdec.png\"\n        },\n        {\n            \"idimage\": \"6ad520c9-3ad2-4c66-b5e9-68a41785b55a\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/6ad520c9-3ad2-4c66-b5e9-68a41785b55a.png\"\n        },\n        {\n            \"idimage\": \"efe4080f-ad46-4e9b-810e-0ebc63188088\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/efe4080f-ad46-4e9b-810e-0ebc63188088.png\"\n        },\n        {\n            \"idimage\": \"bfafe159-81da-4923-9683-f9d418ac5a52\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/bfafe159-81da-4923-9683-f9d418ac5a52.png\"\n        },\n        {\n            \"idimage\": \"677fe12f-81ad-4afe-81b3-ff0127d59fed\",\n            \"rutaCompleta\": \"http://florigroup.onrender.com/uploads/GAMEUSER/bbe520c7-4f26-42f7-a37b-60da0656bd63/677fe12f-81ad-4afe-81b3-ff0127d59fed.png\"\n        }\n    ],\n  \"tamanoTablero\": 36,\n  \"limite\": 10000\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/secuencias/generar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"secuencias",
+								"generar"
+							]
+						},
+						"description": "Genera e inserta secuencias aleatorias para el juego de memoria. Detecta automáticamente cuando se han agotado todas las combinaciones posibles.\n\n**Parámetros:**\n- idevent: ID del evento (obligatorio)\n- imagesid: Array de imágenes con idimage y rutaCompleta (obligatorio)\n- tamanoTablero: Tamaño del tablero (opcional, por defecto 16)\n- limite: Número máximo de secuencias a generar (opcional, por defecto 100)"
+					},
+					"response": []
+				},
+				{
+					"name": "Generar Secuencias (Tablero 4x4)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idevent\": 1,\n  \"imagesid\": [\n    {\n      \"idimage\": \"914581b8-1969-4e78-a6af-c6d7937eee34\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/914581b8-1969-4e78-a6af-c6d7937eee34.png\"\n    },\n    {\n      \"idimage\": \"d8a3ea3b-6e1c-417b-9ff8-ba7916b1ae5a\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/d8a3ea3b-6e1c-417b-9ff8-ba7916b1ae5a.webp\"\n    },\n    {\n      \"idimage\": \"4c540992-419a-4278-8b41-47993d1d7b0b\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/4c540992-419a-4278-8b41-47993d1d7b0b.webp\"\n    },\n    {\n      \"idimage\": \"94bb6c22-8a11-4dc3-a34e-155fd4d8ada3\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/94bb6c22-8a11-4dc3-a34e-155fd4d8ada3.webp\"\n    },\n    {\n      \"idimage\": \"9697772d-869b-4b94-a403-1ad70086a1fa\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/9697772d-869b-4b94-a403-1ad70086a1fa.webp\"\n    },\n    {\n      \"idimage\": \"0b4af909-34cb-402a-9013-889c9ce5e02f\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/0b4af909-34cb-402a-9013-889c9ce5e02f.png\"\n    },\n    {\n      \"idimage\": \"0c9e376c-d7aa-4176-8d5c-012119525a07\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/0c9e376c-d7aa-4176-8d5c-012119525a07.webp\"\n    },\n    {\n      \"idimage\": \"89226bd9-95f6-48da-b375-04675c0fafec\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/89226bd9-95f6-48da-b375-04675c0fafec.png\"\n    }\n  ],\n  \"tamanoTablero\": 16,\n  \"limite\": 50\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/secuencias/generar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"secuencias",
+								"generar"
+							]
+						},
+						"description": "Genera e inserta secuencias para un tablero 4x4 (16 cartas)"
+					},
+					"response": []
+				},
+				{
+					"name": "Generar Secuencias (Tablero 3x2)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idevent\": 1,\n  \"imagesid\": [\n    {\n      \"idimage\": \"914581b8-1969-4e78-a6af-c6d7937eee34\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/914581b8-1969-4e78-a6af-c6d7937eee34.png\"\n    },\n    {\n      \"idimage\": \"d8a3ea3b-6e1c-417b-9ff8-ba7916b1ae5a\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/d8a3ea3b-6e1c-417b-9ff8-ba7916b1ae5a.webp\"\n    },\n    {\n      \"idimage\": \"4c540992-419a-4278-8b41-47993d1d7b0b\",\n      \"rutaCompleta\": \"http://localhost:3000/uploads/event1/c18cd270-5377-49c0-a1b7-0cc41c4e5945/4c540992-419a-4278-8b41-47993d1d7b0b.webp\"\n    }\n  ],\n  \"tamanoTablero\": 6,\n  \"limite\": 100\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/secuencias/generar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"secuencias",
+								"generar"
+							]
+						},
+						"description": "Genera e inserta secuencias para un tablero 3x2 (6 cartas)"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Secuencia Aleatoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/secuencias/{{evento_id}}/aleatoria",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"secuencias",
+								"{{evento_id}}",
+								"aleatoria"
+							]
+						},
+						"description": "Obtiene una secuencia aleatoria para un evento específico. Útil para iniciar una nueva partida del juego."
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Secuencias por Evento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/secuencias/{{evento_id}}?limit=10&offset=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"secuencias",
+								"{{evento_id}}"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "Número máximo de resultados"
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "Desplazamiento para paginación"
+								}
+							]
+						},
+						"description": "Lista todas las secuencias generadas para un evento específico. Soporta paginación."
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Secuencia",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/secuencias/{{secuencia_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"secuencias",
+								"{{secuencia_id}}"
+							]
+						},
+						"description": "Elimina una secuencia específica por su ID."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GESTION CIUDADES Y SUCURSALES",
+			"item": [
+				{
+					"name": "City Subsidiaries",
+					"item": [
+						{
+							"name": "Get All City-Subsidiary Relations",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/city-subsidiaries",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"city-subsidiaries"
+									]
+								},
+								"description": "Obtiene todas las relaciones ciudad-sucursal-distrito"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Subsidiaries By City",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/city-subsidiaries/city/{{}}/subsidiaries",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"city-subsidiaries",
+										"city",
+										"{{}}",
+										"subsidiaries"
+									]
+								},
+								"description": "Obtiene todas las sucursales para una ciudad específica"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Subsidiaries By District",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/city-subsidiaries/district/{{}}/subsidiaries",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"city-subsidiaries",
+										"district",
+										"{{}}",
+										"subsidiaries"
+									]
+								},
+								"description": "Obtiene todas las sucursales para un distrito específico"
+							},
+							"response": []
+						},
+						{
+							"name": "Get City-Subsidiary Relation by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/city-subsidiaries/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"city-subsidiaries",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "ID de la relación"
+										}
+									]
+								},
+								"description": "Obtiene una relación ciudad-sucursal-distrito por su ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Create City-Subsidiary Relation",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idcity\": 1,\n    \"idsubsidiary\": 1,\n    \"iddistrict\": 1\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/city-subsidiaries",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"city-subsidiaries"
+									]
+								},
+								"description": "Crea una nueva relación ciudad-sucursal-distrito"
+							},
+							"response": []
+						}
+					],
+					"description": "Endpoints para gestionar las relaciones entre ciudades, sucursales y distritos"
+				},
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "Get All Roles",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/roles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles"
+									]
+								},
+								"description": "Obtiene todos los roles"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Role by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/roles/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										"1"
+									]
+								},
+								"description": "Obtiene un rol por su ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Administrador\",\n    \"description\": \"Acceso total al sistema con permisos de administración completos\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/roles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles"
+									]
+								},
+								"description": "Crea un nuevo rol"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Role",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Administrador Global\",\n    \"description\": \"Acceso total al sistema con permisos de administración completos en todas las sucursales\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/roles/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "ID del rol"
+										}
+									]
+								},
+								"description": "Actualiza un rol existente"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Role",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/roles/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1",
+											"description": "ID del rol"
+										}
+									]
+								},
+								"description": "Elimina un rol"
+							},
+							"response": []
+						}
+					],
+					"description": "Endpoints para gestionar los roles del sistema"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://florigroup.onrender.com/",
+			"type": "default"
+		}
+	]
+}
