@@ -55,7 +55,8 @@ export const validateCoupon = (data) => apiClient.post('/api/clientusers/tiket',
 export const startGame = (idevent) => apiClient.post(`/api/secuencias/${idevent}/cliente?idclient=1`);
 // {{base_url}}/api/eventinteractions
 export const finishGame = (data) => apiClient.post(`/api/eventinteractions`, data);
-
+//api/clientusers
+export const createClientUser = (data) => apiClient.post('/api/clientusers', data);
 export const createUser = (data) => apiClient.post('/api/users', data);
 export const getAllUsers = () => apiClient.get('/api/users/all');
 export const getUserById = (id) => apiClient.get(`/api/users/${id}`);

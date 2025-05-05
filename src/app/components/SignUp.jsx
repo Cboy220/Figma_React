@@ -8,6 +8,7 @@ import { Footer } from "../components";
 import { Link } from "react-router";
 import Button from "../shared-modules/component-helpers/button/Button";
 import InputBox from "../shared-modules/component-helpers/inputBox/InputBox";
+import { createClientUser } from "../core/http/apiService"; // Import the createClientUser API function
 
 setDefaultOptions({
   locale: {
@@ -28,9 +29,28 @@ registerLocale("es", es);
 const SignUp = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [Success, setSuccess] = useState(false);
+  const [nameInput, setNameInput] = useState(""); // State for name input
+  const [phoneInput, setPhoneInput] = useState(""); // State for phone input
 
-  const handleSuccessClick = () => {
-    setSuccess(true);
+  const handleSuccessClick = async () => {
+    try {
+      const data = {
+        name: nameInput, // Replace with the actual state or variable for name input
+        phone: phoneInput, // Replace with the actual state or variable for phone input
+        birthdate: startDate.toISOString().split("T")[0], // Format the date as YYYY-MM-DD
+      };
+
+      const response = await createClientUser(data); // Call the createClientUser API
+      console.log("User created successfully:", response);
+      if(response.status == 201){
+        setSuccess(true);
+      }else{
+        alert(response.message);
+      }
+       // Set success state to true
+    } catch (error) {
+      console.error("Error creating user:", error);
+    }
   };
 
   return (
@@ -104,26 +124,40 @@ const SignUp = () => {
                 dinámicas con premios que te encantarán.
               </div>
 
-              <div style={{color:"#234290", fontSize: "clamp(1rem, 1.5vw, 1.2rem)"}}>
-              Tu cuenta te permitirá:
+              <div style={{ color: "#234290", fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}>
+                Tu cuenta te permitirá:
               </div>
 
               <div>
                 <div>
-                  <img src={Tick} style={{with:"20px", height:"20px", marginRight:"10px"}}/>
-                Jugar y acumular puntos
+                  <img
+                    src={Tick}
+                    style={{ with: "20px", height: "20px", marginRight: "10px" }}
+                  />
+                  Jugar y acumular puntos
                 </div>
                 <div>
-                <img src={Tick} style={{with:"20px", height:"20px", marginRight:"10px"}}/>
-                Validar tus códigos promocionales
+                  <img
+                    src={Tick}
+                    style={{ with: "20px", height: "20px", marginRight: "10px" }}
+                  />
+                  Validar tus códigos promocionales
                 </div>
                 <div>
-                <img src={Tick} style={{with:"20px", height:"20px", marginRight:"10px"}}/>
-                Saber antes que nadie qué juegos vienen próximamente
+                  <img
+                    src={Tick}
+                    style={{ with: "20px", height: "20px", marginRight: "10px" }}
+                  />
+                  Saber antes que nadie qué juegos vienen próximamente
                 </div>
               </div>
 
-              <InputBox label="Nombre" placeholder="Ingresa tu nombre" />
+              <InputBox
+                label="Nombre"
+                placeholder="Ingresa tu nombre"
+                value={nameInput}
+                onChange={(e) => setNameInput(e.target.value)}
+              />
 
               <div>
                 <div
@@ -146,7 +180,12 @@ const SignUp = () => {
                 />
               </div>
 
-              <InputBox label="Celular" placeholder="Ingresa tu número" />
+              <InputBox
+                label="Celular"
+                placeholder="Ingresa tu número"
+                value={phoneInput}
+                onChange={(e) => setPhoneInput(e.target.value)}
+              />
 
               <div>
                 <Button label="Registrarme" onClick={handleSuccessClick} />
